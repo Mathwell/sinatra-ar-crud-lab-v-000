@@ -9,7 +9,7 @@ ActiveRecord::Base.establish_connection(
 )
 
 configure :development do
-  set :database, 'sqlite3:db/database.db'
+  set :database, 'sqlite3:db/posts.db'
 end
 
 require_all 'app'
