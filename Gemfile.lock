@@ -108,7 +108,7 @@ DEPENDENCIES
   pry
   pry-nav
   rack-test
-  rake
+  rake (= 10.4.2)
   require_all
   rspec
   shotgun
