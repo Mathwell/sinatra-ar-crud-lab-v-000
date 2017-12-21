@@ -11,11 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171221232524) do
-
-  create_table "posts", force: :cascade do |t|
-    t.string "name"
-    t.string "breed"
-  end
+ActiveRecord::Schema.define(version: 20171221023118) do
 
 end
