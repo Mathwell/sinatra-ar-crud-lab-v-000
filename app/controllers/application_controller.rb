@@ -2,7 +2,7 @@ require_relative '../../config/environment'
 
 class ApplicationController < Sinatra::Base
 
-  @@deleted=[]
+ @@deleted=""
 
   configure do
     set :public_folder, 'public'
@@ -47,7 +47,7 @@ class ApplicationController < Sinatra::Base
 
   delete '/posts/:id/delete' do #delete action
     @post = Post.find_by_id(params[:id])
-    @@deleted<<@post.name
+    @@deleted=@post.name
     @post.delete
 
     redirect to '/posts'
