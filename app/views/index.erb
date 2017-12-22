@@ -2,3 +2,8 @@
 Name: <%= post.name %><br>
 Content: <%= post.content %><br>
 <% end%>
+
+<% @@deleted.each do |post|%>
+Name: <%= post %> was deleted
+<% end%>
+
