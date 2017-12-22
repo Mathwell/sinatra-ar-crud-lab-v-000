@@ -11,9 +11,14 @@ class ApplicationController < Sinatra::Base
 
   end
 
-  get '/posts/new' do
+  get '/posts/new' do  
     puts Post.all
     erb :new
+  end
+
+  post '/posts' do
+    @post=Post.new(params[:name], params[:content])
+    erb :index
   end
 
   get 'post/:id' do
