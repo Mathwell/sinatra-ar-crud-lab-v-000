@@ -6,4 +6,5 @@ class Post<ActiveRecord::Base
     self.new(name: params[:post_name])
   end
 
+
 end
