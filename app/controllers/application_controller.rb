@@ -12,12 +12,11 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/posts/new' do
-    puts Post.all
     erb :new
   end
 
   post '/posts' do
-    @post=Post.new(params[:name], params[:content])
+    @post=Post.new(params)
     @posts=Post.all
     erb :index
   end
