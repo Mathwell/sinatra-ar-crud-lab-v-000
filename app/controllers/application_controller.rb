@@ -26,7 +26,6 @@ class ApplicationController < Sinatra::Base
   end
 
   get 'posts/:id' do
-    puts params
     @post=Post.find_by_id(params[:id])
     #puts @post
     erb :show
