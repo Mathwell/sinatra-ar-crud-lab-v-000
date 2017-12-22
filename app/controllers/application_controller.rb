@@ -29,6 +29,7 @@ class ApplicationController < Sinatra::Base
 
   get '/posts/:id' do  #loads show page
     @post = Post.find_by_id(params[:id])
+    @@deleted=@post.name
     erb :show
   end
 
