@@ -30,7 +30,7 @@ class ApplicationController < Sinatra::Base
 
   get 'posts/:id' do
     @post=params[:id]
-    puts post
+    puts @post
     erb :show
   end
 
