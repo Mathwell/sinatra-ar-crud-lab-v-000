@@ -28,7 +28,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/posts/:id' do  #loads show page
-    @post = Post.find_by_id(params[:id])
+    @post = Post.find_by_id(params[:id])    
     erb :show
   end
 
@@ -49,6 +49,7 @@ class ApplicationController < Sinatra::Base
     @post = Post.find_by_id(params[:id])
     @deleted=@post.name
     @post.delete
+    puts params
     erb :delete
 
     #redirect to '/posts'
